@@ -4,6 +4,8 @@ public class Main {
         mylinkedlist.printList();
         mylinkedlist.prepend(1);
         mylinkedlist.printList();
+        System.out.println(mylinkedlist.removeFrist().value);
+        mylinkedlist.printList();
 
     }
 }
