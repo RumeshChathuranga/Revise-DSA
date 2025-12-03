@@ -52,6 +52,17 @@ public class LinkedList {
         }
         return temp;
     }
+    public void prepend(int value){
+        Node newnode = new Node(value);
+        if (length == 0){
+            head = newnode;
+            tail = newnode;
+        }else{
+            newnode.next = head;
+            head = newnode;
+        }
+        length++;
+    }
 
     public void printList(){
         Node temp = head;
