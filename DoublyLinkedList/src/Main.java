@@ -7,5 +7,7 @@ public class Main {
         myDll.prepend(1);
         myDll.printList();
         System.out.println(myDll.get(2).value);
+        System.out.println(myDll.set(2,100));
+        myDll.printList();
     }
 }
