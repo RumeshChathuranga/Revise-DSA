@@ -101,6 +101,31 @@ public class DoublyLinkedList {
         return false;
     }
 
+    public boolean insert(int index,int value){
+        if(index<0 || index > length) return false;
+        if(index == 0){
+            prepend(value);
+            length++;
+            return true;
+        }
+        if(index == length) {
+            append(value);
+            length++;
+            return  true;
+        }
+        else{
+            Node newnode = new Node(value);
+            Node before = get(index-1);
+            Node after = before.next;
+            before.next = newnode;
+            after.prev = newnode;
+            newnode.next = after;
+            newnode.prev = before;
+            length++;
+            return  true;
+        }
+    }
+
     public void printList(){
         Node temp = head;
         while (temp != null){

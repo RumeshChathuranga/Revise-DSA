@@ -9,5 +9,7 @@ public class Main {
         System.out.println(myDll.get(2).value);
         System.out.println(myDll.set(2,100));
         myDll.printList();
+        System.out.println(myDll.insert(2,200));
+        myDll.printList();
     }
 }
