@@ -5,6 +5,8 @@ public class Main {
         myDll.append(9);
         myDll.append(10);
         myDll.printList();
+        myDll.remveLast();
+        myDll.printList();
 
     }
 }
