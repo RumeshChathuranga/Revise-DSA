@@ -6,6 +6,6 @@ public class Main {
         myDll.append(10);
         myDll.prepend(1);
         myDll.printList();
-
+        System.out.println(myDll.get(2).value);
     }
 }
