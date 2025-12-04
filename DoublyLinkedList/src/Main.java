@@ -4,8 +4,7 @@ public class Main {
         myDll.append(8);
         myDll.append(9);
         myDll.append(10);
-        myDll.printList();
-        myDll.remveLast();
+        myDll.prepend(1);
         myDll.printList();
 
     }
