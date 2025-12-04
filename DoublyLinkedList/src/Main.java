@@ -1,15 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         DoublyLinkedList myDll = new DoublyLinkedList(7);
-        myDll.append(8);
-        myDll.append(9);
-        myDll.append(10);
-        myDll.prepend(1);
-        myDll.printList();
-        System.out.println(myDll.get(2).value);
-        System.out.println(myDll.set(2,100));
-        myDll.printList();
-        System.out.println(myDll.insert(2,200));
+
         myDll.printList();
     }
 }

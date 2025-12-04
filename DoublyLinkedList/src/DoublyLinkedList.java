@@ -126,6 +126,27 @@ public class DoublyLinkedList {
         }
     }
 
+    public Node remove(int index){
+        if(index < 0 || index >= length) return null;
+        if (index == 0) {
+            length--;
+            return removeFirst();
+        }
+        if(index == length-1) {
+            length--;
+            return remveLast();
+        }
+        Node temp = get(index);
+
+        temp.prev.next = temp.next;        // Node before = temp.prev;
+        temp.next.prev = temp.prev;        // Node after = temp.next;
+
+        temp.next=null;
+        temp.prev = null;
+        length--;
+        return temp;
+    }
+
     public void printList(){
         Node temp = head;
         while (temp != null){
