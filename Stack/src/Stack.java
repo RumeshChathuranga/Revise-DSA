@@ -30,6 +30,15 @@ public class Stack {
         height++;
     }
 
+    public Node pop(){
+        if( height == 0) return null;
+        Node temp = top;
+        top = top.next;
+        temp.next = null;
+        height--;
+        return temp;
+    }
+
     public void printStack(){
         Node temp = top;
         while(temp != null){
@@ -40,7 +49,6 @@ public class Stack {
     public void getTop(){
         System.out.println("Top : " + top.value);
     }
-
     public void getHeight(){
         System.out.println("Height : " + height);
     }
