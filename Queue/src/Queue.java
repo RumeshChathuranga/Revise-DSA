@@ -19,6 +19,19 @@ public class Queue {
         length = 1;
     }
 
+    public void enqueue(int value){
+        Node newnode = new Node(value);
+        if (length == 0) {
+            first = newnode;
+            last = newnode;
+        }else{
+            last.next = newnode;
+            last = newnode;
+        }
+        length++;
+
+    }
+
     public void printQueue() {
         Node temp = first;
         while (temp != null) {
@@ -26,17 +39,14 @@ public class Queue {
             temp = temp.next;
         }
     }
-
     public void getFirst() {
         System.out.println("First: " + first.value);
 
     }
-
     public void getLast() {
         System.out.println("Last: " + last.value);
 
     }
-
     public void getLength() {
         System.out.println("Length: " + length);
 
