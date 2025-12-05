@@ -8,5 +8,11 @@ public class Main {
         q.getLast();
         q.getLength();
         q.printQueue();
+        System.out.println(q.dequeue().value);
+        System.out.println(q.dequeue().value);
+        System.out.println(q.dequeue().value);
+        System.out.println(q.dequeue().value);
+        System.out.println(q.dequeue());
+
     }
 }
