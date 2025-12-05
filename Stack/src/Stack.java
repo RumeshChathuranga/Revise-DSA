@@ -17,6 +17,19 @@ public class Stack {
         height = 1;
     }
 
+    public void push(int value){
+        Node newnode = new Node(value);
+        if (height == 0) {
+            top = newnode;
+            height++;
+        }else{
+            newnode.next = top;
+            top = newnode;
+
+        }
+        height++;
+    }
+
     public void printStack(){
         Node temp = top;
         while(temp != null){
