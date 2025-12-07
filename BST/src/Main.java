@@ -7,6 +7,9 @@ public class Main {
         bst.insert(17);
         bst.insert(57);
         bst.insert(87);
+        System.out.println(bst.contains(17));
+        System.out.println(bst.contains(21));
+        System.out.println(bst.contains(100));
     }
 
 
