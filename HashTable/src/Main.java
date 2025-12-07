@@ -8,7 +8,6 @@ public class Main {
         ht.set("bolts", 200);
         ht.set("screws", 140);
         ht.printTable();
-        System.out.println(ht.get("bolts"));
-        System.out.println(ht.get("rumesh"));
+        System.out.println(ht.keys());
     }
 }
