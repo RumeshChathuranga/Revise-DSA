@@ -7,7 +7,7 @@ public class HashTable {
         private int value;
         private Node next;
 
-        Node(String key, int value){
+        public Node(String key, int value){
             this.key = key;
             this.value = value;
         }
@@ -36,5 +36,18 @@ public class HashTable {
             hash = (hash+asciiValue * 23) % dataMap.length;
         }
         return hash;
+    }
+
+    public void set(String key, int value){
+        int index = hash(key);
+        Node newnode = new Node(key,value);
+        if(dataMap[index] == null) dataMap[index] = newnode;
+        else{
+            Node temp = dataMap[index];
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = newnode;
+        }
     }
 }
