@@ -11,7 +11,16 @@ public class Graph {
     public boolean addVertex(String vertex){
 
         if (adjlist.get(vertex) == null){
-            adjlist.put(vertex,new ArrayList<String>());
+            adjlist.put(vertex,new ArrayList<>());
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addEdge(String vertex1, String vertex2){
+        if (adjlist.get(vertex1) != null && adjlist.get(vertex2)!=null) {
+            adjlist.get(vertex1).add(vertex2);
+            adjlist.get(vertex2).add(vertex1);
             return true;
         }
         return false;
