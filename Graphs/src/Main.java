@@ -10,5 +10,7 @@ public class Main {
         mygraph.printgraph();
         mygraph.removeEdge("B","C");
         mygraph.printgraph();
+        mygraph.removeVertex("A");
+        mygraph.printgraph();
     }
 }
