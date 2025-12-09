@@ -6,11 +6,9 @@ public class Heap {
     public Heap(){
         this.heap = new ArrayList<>();
     }
-
     public List<Integer> getHeap(){
         return new ArrayList<>(heap);
     }
-
     private int leftChild(int index){
         return 2*index + 1; // as the index start from 0
     }
@@ -24,5 +22,15 @@ public class Heap {
         int temp = heap.get(index1);
         heap.set(index1, heap.get(index2));
         heap.set(index2,temp);
+    }
+
+    public void insert(int value){
+        heap.add(value);
+        int current = heap.size()-1;
+
+        while(current > 0 && heap.get(current) > heap.get(parent(current))){
+            swap(current,parent(current));
+            current = parent(current);
+        }
     }
 }
