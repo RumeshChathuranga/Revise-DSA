@@ -10,5 +10,15 @@ public class Main {
         System.out.println(myheap.getHeap());
         myheap.insert(75);
         System.out.println(myheap.getHeap());
+        System.out.println(myheap.remove());
+        System.out.println(myheap.getHeap());
+        System.out.println(myheap.remove());
+        System.out.println(myheap.getHeap());
+        System.out.println(myheap.remove());
+        System.out.println(myheap.getHeap());
+        System.out.println(myheap.remove());
+        System.out.println(myheap.getHeap());
+        System.out.println(myheap.remove());
+        System.out.println(myheap.getHeap());
     }
 }
