@@ -50,4 +50,17 @@ public class BinarySearchTree {
         return false;
     }
 
+    private boolean rcontains(Node currentNode, int value){
+        if (currentNode == null) return false;
+        if (currentNode.value == value) return  true;
+        if(currentNode.value > value){
+            return rcontains(currentNode.left,value);
+        }else{
+            return rcontains(currentNode.right,value);
+        }
+    }
+    public boolean rcontains(int value){
+        return rcontains(root,value);
+    }
+
 }
