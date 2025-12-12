@@ -63,4 +63,18 @@ public class BinarySearchTree {
         return rcontains(root,value);
     }
 
+    private Node rinsert(Node currentNode, int value){
+        if (currentNode == null) return (new  Node(value));
+        if( value < currentNode.value) {
+            currentNode.left = rinsert(currentNode.left, value);
+        }else if (value > currentNode.value){ // cant exist duplicates
+            currentNode.right = rinsert(currentNode.right,value);
+        }
+        return currentNode;
+    }
+    public void rinsert(int value){
+        // If root is null the code not going to work
+        if( root == null) root = new Node(value);
+        rinsert(root, value);
+    }
 }
