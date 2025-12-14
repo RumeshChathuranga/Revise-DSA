@@ -10,6 +10,7 @@ public class Main {
         bst.rinsert(87);
         System.out.println(bst.BFS());
         System.out.println(bst.DFSPreOrder());
+        System.out.println(bst.DFSPostOrder());
     }
 
 
