@@ -11,6 +11,7 @@ public class Main {
         System.out.println(bst.BFS());
         System.out.println(bst.DFSPreOrder());
         System.out.println(bst.DFSPostOrder());
+        System.out.println(bst.DFSInOrder());
     }
 
 
