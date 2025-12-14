@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -130,6 +131,23 @@ public class BinarySearchTree {
             }
         }
         return  results;
+    }
+    public ArrayList<Integer> DFSPreOrder(){
+        ArrayList<Integer> resutls  = new ArrayList<>();
+
+        class Traverse{
+            Traverse(Node currentNode){
+                resutls.add(currentNode.value);
+                if(currentNode.left != null){
+                    new Traverse(currentNode.left);
+                }
+                if(currentNode.right != null){
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+        new Traverse(root);
+        return  resutls;
     }
 
 }
