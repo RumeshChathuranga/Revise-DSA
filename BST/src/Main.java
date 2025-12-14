@@ -7,9 +7,7 @@ public class Main {
         bst.rinsert(17);
         bst.rinsert(57);
         bst.rinsert(87);
-        System.out.println(bst.contains(76));
-        bst.deleteNode(76);
-        System.out.println(bst.contains(76));
+        System.out.println(bst.BFS());
     }
 
 
