@@ -14,13 +14,19 @@ public class MergeSort {
             else combined[index++] = arr2[j++];
         }
         while( i < arr1.length) combined[index++] = arr1[i++];
-        while( j < arr2.length) combined[index++] = arr1[j++];
+        while( j < arr2.length) combined[index++] = arr2[j++];
         return  combined;
     }
-
+    public static int[] mergeSort(int[] arr){
+        if (arr.length == 1) return arr;
+        int midIndex = arr.length/2;
+        int[] left = mergeSort(Arrays.copyOfRange(arr,0,midIndex));
+        int[] right = mergeSort(Arrays.copyOfRange(arr,midIndex,arr.length));
+        return merge(left,right);
+    }
     public static void main(String[] args) {
-        int[] arr1 = {1,3,7,8};
-        int[] arr2 = {2,4,5,6};
-        System.out.println(Arrays.toString(merge(arr1,arr2)));
+        int[] original = {3,1,4,2,7,5,8,6};
+        int[] sorted = mergeSort(original);
+        System.out.println(Arrays.toString(sorted));
     }
 }
