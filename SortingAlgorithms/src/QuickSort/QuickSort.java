@@ -22,10 +22,21 @@ public class QuickSort {
         return swapIndex;
     }
 
+    private static void quickSortHelper(int[] arr, int left , int right){
+        if(left < right) {
+            int pivotIndex = pivot(arr, left, right);
+            quickSortHelper(arr, left, pivotIndex - 1);
+            quickSortHelper(arr, pivotIndex + 1, right);
+        }
+
+    }
+    public static void quickSort(int[] arr){
+        quickSortHelper(arr, 0, arr.length-1);
+    }
+
     public static void main(String[] args) {
-        int[] myarr = {4,6,1,7,3,2,5};
-        int returnIndex = pivot(myarr, 0,6);
-        System.out.println("Return index: "+ returnIndex);
-        System.out.println(Arrays.toString(myarr));
+        int[] myArray = {4,6,1,7,3,2,5};
+        quickSort(myArray);
+        System.out.println(Arrays.toString(myArray));
     }
 }
